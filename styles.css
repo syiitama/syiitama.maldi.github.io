@@ -1,0 +1,478 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    scroll-behavior: smooth;
+}
+
+header {
+    background-color: #1abc9c;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    margin: 0 10px;
+}
+
+nav a {
+    display: block;
+    padding: 10px 20px;
+    background-color: #2980b9;
+    color: #ecf0f1;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #ecf0f1;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+nav a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+nav a.active {
+    background-color: #3498db;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav li {
+        margin: 5px 0;
+    }
+}
+
+main {
+    padding: 20px;
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.profile-container {
+    width: 97%;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-info {
+    margin-top: 20px;
+}
+
+.profile-info p {
+    margin-bottom: 10px;
+}
+
+.profile-info strong {
+    font-weight: bold;
+    color: #333;
+}
+
+.pertanyaan {
+    padding: 20px;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+
+.pertanyaan form {
+    display: block;
+    position: relative;
+    padding: 25px;
+    margin-right: 12;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+.print-only {
+    display: none;
+    
+}
+
+@media print {
+    #tombol-cetak {
+        display: none;
+        /* Sembunyikan tombol saat dicetak */
+    }
+
+    .hasil-diagnosa {
+        margin: auto;
+    }
+
+    .print-only {
+        display: block;
+    }
+
+    .kop-rs {
+        position: absolute;
+        text-align: center;
+    }
+}
+
+.hasil-diagnosa {
+    padding: 20px;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+    display: block;
+    position: relative;
+    padding: 25px;
+    margin-right: 12;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+.saran {
+    padding: 20px;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="checkbox"] {
+    margin-right: 20px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 20px;
+}
+
+
+.hasil-diagnosa input:checked~.checkmark:after {
+    display: block;
+}
+
+.hasil-diagnosa input:checked~.checkmark {
+    background-color: #2196F3;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+#diagnosa-malaria {
+    width: 80%;
+    margin: 40px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#diagnosa-malaria h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#diagnosa-malaria section {
+    margin-bottom: 20px;
+}
+
+#diagnosa-malaria ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#diagnosa-malaria li {
+    margin-bottom: 10px;
+}
+
+#diagnosa-malaria input[type="radio"] {
+    margin-right: 10px;
+}
+
+#diagnosa-malaria button[type="submit"] {
+    background-color: #2980b9;
+    color: #fff;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#diagnosa-malaria button[type="submit"]:hover {
+    background-color: #3498db;
+}
+
+#diagnosa-malaria button[type="menu"] {
+    visibility: hidden;
+    background-color: #4CAF50;
+
+
+}
+
+.hero {
+    background-color: #1abc9c;
+    color: #ffffff;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #1abc9c;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #2980b9;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+}
+
+.cta-button:hover {
+    background-color: #3498db;
+    transform: translateY(-2px);
+}
+
+button {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #2196F3;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+}
+
+/* Set a hover effect for the button*/
+button:hover {
+
+    transition: background-color 0.3s ease;
+    background-color: #3498db;
+    transform: translateY(-2px);
+}
+
+.cancelbtn {
+    background-color: #f44336;
+
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 40px 20px;
+}
+
+.feature-card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.check-container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.check-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    height: 25px;
+    width: 25px;
+    background-color: #c5c5c5;
+}
+
+/* On mouse-over, add a grey background color */
+.check-container:hover input~.checkmark {
+    background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.check-container input:checked~.checkmark {
+    background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.check-container input:checked~.checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.check-container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+input[type=text],
+select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+div {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+/* Do not print */
+@media print {
+    .no-print {
+        display: none !important;
+    }
+}
+
+footer {
+    background-color: #1abc9c;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* hide the item to print */
+.hidden {
+    display: none;
+}
+
+table {
+    border: none;
+
+}
+
+table.b{
+    table-layout: auto;
+    text-align: left;
+    padding: auto;
+
+}
+
+table.a {
+    table-layout: auto;
+    width: 100%;
+    text-align: left;
+    border: #333;
+}
+
+.print-only{
+    padding : 30px 30px 30px 30px ;
+
+}
+
+img {
+    width: 30%;
+    height: 30%;
+}
+

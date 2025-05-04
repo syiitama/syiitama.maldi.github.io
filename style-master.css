@@ -1,0 +1,205 @@
+/* Modal Background */
+#modal-bg {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+#modal-bg:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Section Container */
+.master-section {
+    /* background-color: #f9f9f9; */
+    border-radius: 12px;
+    margin-bottom: 16px;
+    padding: 15px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+/* Buttons in Section */
+.master-section button {
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+.master-section button:hover {
+    background-color: #0056b3;
+}
+
+/* CTA Button */
+.master-cta {
+    background-color: #007bff;
+    text-decoration: none;
+    color: #ffffff;
+    padding: 10px 16px;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background-color 0.2s ease;
+}
+.master-cta:hover {
+    background-color: #328ff3fa;
+}
+
+/* Table Style */
+.master-table {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+}
+.master-table th {
+    background-color: #007bff;
+    color: white;
+    padding: 12px;
+    text-align: left;
+}
+.master-table td,
+.master-table th {
+    border: 1px solid #ddd;
+    padding: 12px;
+}
+.master-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Table Action Buttons */
+.action-links a {
+    color: white;
+    text-decoration: none;
+    background-color: #007bff;
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    transition: background-color 0.2s ease;
+}
+.action-links a:hover {
+    background-color: #0056b3;
+}
+
+/* Modal Container */
+.modal-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    max-width: 90%;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    animation: fadeInScale 0.3s ease forwards;
+}
+
+/* Modal Header */
+.modal-content h3 {
+    margin-top: 0;
+    font-size: 1.6rem;
+    color: #333;
+    text-align: center;
+}
+
+/* Modal Body Text */
+.modal-content p {
+    font-size: 1rem;
+    color: #555;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Modal Buttons */
+.modal-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+.modal-buttons button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+/* Confirm Buttons */
+.modal-buttons button[type="submit"],
+.modal-buttons button[id^="confirm-btn-delete"] {
+    background-color: #007bff;
+    color: white;
+}
+.modal-buttons button[type="submit"]:hover,
+.modal-buttons button[id^="confirm-btn-delete"]:hover {
+    background-color: #0056b3;
+}
+
+/* Cancel Buttons */
+.modal-buttons button[id^="cancel-btn"] {
+    background-color: #6c757d;
+    color: white;
+}
+.modal-buttons button[id^="cancel-btn"]:hover {
+    background-color: #5a6268;
+}
+
+/* Form Inputs */
+.modal-content form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #444;
+}
+.modal-content form input[type="text"],
+.modal-content form input[type="hidden"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+/* Animation */
+@keyframes fadeInScale {
+    0% {
+        opacity: 0;
+        transform: scale(0.50);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Override Bootstrap default fade modal */
+.modal.fade.show {
+    background-color: transparent !important;
+    pointer-events: none !important;
+}
+.modal.fade.show .modal-dialog {
+    pointer-events: auto !important;
+}
+.modal-backdrop.show {
+    background-color: transparent !important;
+    display: none !important;
+}
+
